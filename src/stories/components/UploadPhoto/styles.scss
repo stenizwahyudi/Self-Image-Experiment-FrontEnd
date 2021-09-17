@@ -1,0 +1,35 @@
+@import '../../../scss/variables.scss';
+
+// @file
+// Webcam Controls
+
+// .upload-photo {}
+
+.upload-photo__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-3;
+  font-size: $font-size-sm;
+  margin: $spacing-3 0;
+  margin-left: -35px;
+  text-align: center;
+  width: rem(670px);
+}
+
+.upload-photo__submit {
+  margin: $spacing-6 0 0;
+}
+
+.upload-photo__btn {
+  @include svg-background(icon-file-upload);
+
+  background-repeat: no-repeat;
+  background-position: right 50px center;
+  padding-right: $spacing-5;
+  margin-bottom: 0;
+}
+
+.upload-photo__err {
+  color: $red-dark;
+  margin-top: $spacing-2;
+}

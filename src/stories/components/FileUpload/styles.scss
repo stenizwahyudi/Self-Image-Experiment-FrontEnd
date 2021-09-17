@@ -1,0 +1,31 @@
+@import '../../../scss/variables.scss';
+
+// @file
+// File Upload
+
+.file-upload {
+  margin: $spacing-3 0 0;
+}
+
+.file-upload__inner {
+  margin-top: $spacing-3;
+
+  p {
+    display: inline-block;
+    margin-right: $spacing-1;
+  }
+}
+
+.file-upload__input {
+  display: none;
+}
+
+.file-upload__label {
+  width: rem(120px);
+  border: rem(1px) solid $black;
+  display: inline-block;
+  padding: $spacing-1 $spacing-1;
+  cursor: pointer;
+  margin-right: $spacing-1;
+}
+

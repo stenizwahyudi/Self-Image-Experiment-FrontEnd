@@ -1,0 +1,25 @@
+{
+  "short_name": "SIE Platform",
+  "name": "Easily create, update and host psychological studies all on a single platform.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x187"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x499"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#212121",
+  "background_color": "#ffffff"
+}

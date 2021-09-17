@@ -1,0 +1,40 @@
+@import '../../../scss/variables.scss';
+
+// @file
+// Form
+
+.form {
+  width: 100%;
+}
+
+.form__msg {
+  font-size: $font-size-sm;
+  text-align: left;
+}
+
+.form--account,
+.form--signup,
+.form--login {
+  text-align: right;
+
+  > * {
+    @include fade-in-up;
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+
+  .form__msg {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.form--account {
+  margin: $spacing-3 0 0;
+  text-align: left;
+}

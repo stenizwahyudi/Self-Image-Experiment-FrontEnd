@@ -1,0 +1,75 @@
+@import '../../../scss/variables.scss';
+
+// @file
+// Wizard
+
+.wizard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-5;
+  margin: $spacing-10 0 0;
+
+  @include bp-tablet-lg {
+    grid-template-columns: auto rem(600px);
+    margin: $spacing-12 0 0;
+
+    > * {
+      &:last-child {
+        grid-column-start: 2;
+      }
+    }
+  }
+}
+
+.wizard__controls {
+  margin: $spacing-3 0 $spacing-6;
+  text-align: right;
+}
+
+.wizard__button {
+  @include button-clear();
+
+  color: $black;
+  font-family: $header-font-family;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  padding: $spacing-1 0;
+  text-decoration: underline;
+
+  &:first-child {
+    margin-right: $spacing-5;
+  }
+
+  &.button--tertiary {
+    background-color: $teal;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    display: inline-block;
+    line-height: $line-height-loose;
+    padding: $spacing-1 $spacing-4;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.4s cubic-bezier(0.5,0.25,0,1);
+
+    &:visited {
+      color: $teal-light;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $black;
+      border-radius: 0;
+      border-bottom-left-radius: 50px;
+      border-top-right-radius: 50px;
+      color: $teal;
+    }
+
+    &:active {
+      color: $white;
+    }
+
+    @include bp-tablet {
+      font-size: $font-size-md;
+    }
+  }
+}

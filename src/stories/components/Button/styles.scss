@@ -1,0 +1,115 @@
+@import '../../../scss/variables.scss';
+
+// @file
+// Button
+
+.button {
+  @include button-clear;
+
+  background-color: $black;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  color: $white;
+  display: inline-block;
+  font-family: $header-font-family;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  line-height: $line-height-loose;
+  min-width: rem(180px);
+  padding: $spacing-1 $spacing-4;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.5, 0.25, 0, 1);
+
+  &:visited {
+    color: $teal-light;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $teal-dark;
+    border-radius: 0;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  &:active {
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.15;
+    pointer-events: none;
+    background-color: $gray-3 !important;
+  }
+
+  @include bp-tablet {
+    font-size: $font-size-md;
+  }
+
+  & + .button {
+    margin-left: $spacing-2;
+  }
+}
+
+.button--small {
+  font-size: $font-size-sm
+}
+
+// Secondary button
+.button--secondary {
+  background-color: $teal-dark;
+
+  &:visited {
+    color: $teal-light;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $teal;
+    color: $black;
+  }
+
+  &:active {
+    color: $white;
+  }
+}
+
+// Tertiary button
+.button--tertiary {
+  background-color: $teal;
+  color: $black;
+
+  &:visited {
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $black;
+    color: $teal;
+  }
+
+  &:active {
+    color: $black;
+  }
+}
+
+// Quaternary button
+.button--quaternary {
+  background-color: $teal-light;
+  color: $black;
+
+  &:visited {
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $teal;
+  }
+
+  &:active {
+    color: $black;
+  }
+}

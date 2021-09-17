@@ -1,0 +1,61 @@
+@import '../../../scss/variables.scss';
+
+// @file
+// Horizontal Title
+
+.horizontal-title {
+  &--medium {
+    margin-bottom: $spacing-3;
+
+    .horizontal-title__content {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &--large {
+    margin-bottom: $spacing-5;
+    .horizontal-title__content {
+      font-size: rem(24px);
+    }
+  }
+}
+
+.horizontal-title__container {
+  @include bp-tablet {
+    display: flex;
+
+    .horizontal-title--small & {
+      align-items: center;
+
+      h6 {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.horizontal-title__title {
+  max-width: rem(350px);
+
+  .horizontal-title--small & {
+    padding-right: $spacing-1;
+  }
+
+  @include bp-tablet {
+    padding-right: $spacing-3;
+  }
+
+  @include bp-desktop {
+    padding-right: $spacing-5;
+  }
+}
+
+.horizontal-title__eyebrow {
+  color: $gray-5;
+  font-size: rem(13px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+

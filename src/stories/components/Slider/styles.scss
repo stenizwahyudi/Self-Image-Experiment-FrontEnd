@@ -1,0 +1,67 @@
+@import '../../../scss/variables.scss';
+
+// @file
+// Slider
+
+$text-arrow-distance: 1.5rem;
+$text-text-distance: 1rem;
+
+.swiper-container--layout {
+  padding: 0 0 $spacing-2 $spacing-6;
+  position: relative !important;
+}
+
+.slider {
+  margin: $spacing-3 0 $spacing-12;
+  padding-left: 2rem !important;
+  width: 100%;
+
+  // @include bp-tablet-lg {
+  //   max-width: calc(100% - #{rem(325px)});
+  // }
+
+  // @include bp-desktop {
+  //   max-width: calc(100% - #{rem(350px)});
+  // }
+
+  .swiper-wrapper {
+    padding: $spacing-3 0;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+.slider__button {
+  @include button-clear;
+  background-repeat: no-repeat;
+  font-family: $header-font-family;
+  font-size: $font-size-md;
+  font-weight: 600;
+
+  &.slider__button--back {
+    @include svg-background('icon-arrow-left');
+    background-position: left center;
+    padding-left: $text-arrow-distance;
+    margin-right: $text-text-distance;
+  }
+
+  &.slider__button--next {
+    @include svg-background('icon-arrow-right');
+    background-position: right center;
+    padding-right: $text-arrow-distance;
+    margin-left: $text-text-distance;
+    margin-right: $spacing-3;
+  }
+}
+
+.slider__button--disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.slider__controls {
+  margin-top: $spacing-4;
+  text-align: left;
+}
